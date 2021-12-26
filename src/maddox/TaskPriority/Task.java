@@ -1,8 +1,8 @@
-package main.TaskPriority;
+package maddox.TaskPriority;
 
 public interface Task {
 
-    main.TaskPriority.Priority priority();
+    maddox.TaskPriority.Priority priority();
 
     boolean validate();
 

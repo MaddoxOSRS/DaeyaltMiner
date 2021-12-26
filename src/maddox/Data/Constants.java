@@ -1,7 +1,4 @@
-package main.Data;
-
-import org.powbot.api.Tile;
-import org.powbot.api.Area;
+package maddox.Data;
 
 
 public class Constants {

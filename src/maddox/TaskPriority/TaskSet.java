@@ -1,4 +1,4 @@
-package main.TaskPriority;
+package maddox.TaskPriority;
 
 import java.util.*;
 

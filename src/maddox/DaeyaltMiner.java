@@ -1,13 +1,13 @@
-package main;
+package maddox;
 
 import com.google.common.eventbus.Subscribe;
-import main.Data.Variables;
-import main.Data.Constants;
-import main.Logic.UtilityLogic;
-import main.TaskPriority.Task;
-import main.TaskPriority.TaskSet;
+import maddox.Data.Variables;
+import maddox.Data.Constants;
+import maddox.Logic.UtilityLogic;
+import maddox.TaskPriority.Task;
+import maddox.TaskPriority.TaskSet;
 
-import main.Tasks.*;
+import maddox.Tasks.*;
 import org.powbot.api.Condition;
 import org.powbot.api.Random;
 import org.powbot.api.event.BreakEndedEvent;
@@ -59,7 +59,7 @@ public class DaeyaltMiner extends AbstractScript {
     public static void main(String[] args) throws IOException {
         ProcessBuilder builder = new ProcessBuilder("C:\\Users\\wesle\\.powbot\\android\\platform-tools\\adb.exe", "-s", "127.0.0.1:5555", "forward", "tcp:61666", "tcp:61666");
         builder.start();
-        new ScriptUploader().uploadAndStart("MaddDaeyalt", "main", "127.0.0.1:5555", true, true);
+        new ScriptUploader().uploadAndStart("MaddDaeyalt", "maddox", "127.0.0.1:5555", true, true);
     }
 
 
@@ -91,7 +91,7 @@ public class DaeyaltMiner extends AbstractScript {
 
     @Override
     public void poll() {
-        TaskSet tasks = new main.TaskPriority.TaskSet(
+        TaskSet tasks = new maddox.TaskPriority.TaskSet(
                 new Mining()
         );
         Task task = tasks.getValidTask();

@@ -1,4 +1,4 @@
-package main.Logic;
+package maddox.Logic;
 
 import org.powbot.api.rt4.walking.model.Skill;
 

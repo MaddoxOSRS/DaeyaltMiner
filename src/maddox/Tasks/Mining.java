@@ -1,11 +1,11 @@
-package main.Tasks;
+package maddox.Tasks;
 
-import main.Data.Constants;
-import main.DaeyaltMiner;
-import main.Logic.InteractLogic;
-import main.Logic.UtilityLogic;
-import main.TaskPriority.Priority;
-import main.TaskPriority.Task;
+import maddox.Data.Constants;
+import maddox.DaeyaltMiner;
+import maddox.Logic.InteractLogic;
+import maddox.Logic.UtilityLogic;
+import maddox.TaskPriority.Priority;
+import maddox.TaskPriority.Task;
 import org.powbot.api.Condition;
 import org.powbot.api.rt4.*;
 import org.powbot.mobile.script.ScriptManager;
