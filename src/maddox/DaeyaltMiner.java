@@ -48,7 +48,7 @@ public class DaeyaltMiner extends AbstractScript {
     public static void main(String[] args) throws IOException {
         ProcessBuilder builder = new ProcessBuilder("C:\\Users\\wesle\\.powbot\\android\\platform-tools\\adb.exe", "-s", "127.0.0.1:5555", "forward", "tcp:61666", "tcp:61666");
         builder.start();
-        new ScriptUploader().uploadAndStart("MaddDaeyalt", "maddox", "127.0.0.1:5555", true, true);
+        new ScriptUploader().uploadAndStart("MaddDaeyalt", "main", "127.0.0.1:5555", true, true);
     }
 
 
