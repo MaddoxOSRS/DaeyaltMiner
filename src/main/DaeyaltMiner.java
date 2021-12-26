@@ -137,7 +137,7 @@ public class DaeyaltMiner extends AbstractScript {
     @Override
     public void onStop() {
         ScriptManager.INSTANCE.stop();
-        //currentStatus = "Stopping script...";
+        currentStatus = "Stopping script...";
         System.out.println("Thanks for using Maddox's " + getManifest().name() + ".");
     }
 

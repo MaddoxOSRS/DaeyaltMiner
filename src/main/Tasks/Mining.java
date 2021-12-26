@@ -33,26 +33,21 @@ public class Mining implements Task {
         switch (getSubTask()) {
 
             case WALK_TO_MINE:
-                main.currentStatus = "Walking to Daeyalt block to mine...";
-                System.out.println("Walking to nearest Daeyalt block.");
+                main.currentStatus = "Walking to Daeyalt rock to mine...";
 
                 GameObject daeyalt = InteractLogic.getNearestObject(39095, 25);
 
                 if (!daeyalt.valid() || !daeyalt.inViewport()) {
-                    System.out.println("Daeyalt essence mine is not on-screen, walking to closest location...");
                     Movement.moveTo(daeyalt.getTile());
                     Camera.turnTo(daeyalt);
                     return Condition.wait(daeyalt::inViewport, 800, 10);
                 }
 
-                System.out.println("Daeyalt essence is on-screen, interacting to mine it...");
-                if (!daeyalt.interact("Mine")) {
-                    System.out.println("Cannot interact with Daeyalt essence...");
-                    return false;
+                 if (!daeyalt.interact("Mine")) {
+                     return false;
                 }
                 if (Condition.wait(() -> Players.local().inMotion(), 200, 5)) {
-                    System.out.println("We are moving");
-                    return Condition.wait(this::areWeMining, 800, 10);
+                     return Condition.wait(this::areWeMining, 800, 10);
                 }
                 break;
 
