@@ -32,17 +32,6 @@ import java.util.Arrays;
         version = "1.00"
 )
 
-@ScriptConfiguration.List(
-        {
-                @ScriptConfiguration(
-                        name = "Daeyalt Count",
-                        description = "Total amount of Daeyalt you want to mine before stopping. Leave empty for unlimited.",
-                        optionType = OptionType.INTEGER,
-                        defaultValue = "0"
-                )
-        }
-)
-
 public class DaeyaltMiner extends AbstractScript {
     public static DaeyaltMiner instance;
 
@@ -71,7 +60,6 @@ public class DaeyaltMiner extends AbstractScript {
         startMiningLevel = Skill.Mining.realLevel();
         lastXPCount = startMiningXP;
         lastActivityTime = ScriptManager.INSTANCE.getRuntime(true);
-        setGUIValues();
 
         Paint p = new PaintBuilder()
                 .x(30)
@@ -81,12 +69,6 @@ public class DaeyaltMiner extends AbstractScript {
                 .trackInventoryItems(Constants.DAEYALT_SHARDS)
                 .build();
         addPaint(p);
-    }
-
-    private void setGUIValues() {
-        int daeyaltCount = getOption("Daeyalt Count");
-
-        Variables.get().daeyaltNeeded = daeyaltCount;
     }
 
     @Override
